@@ -1,0 +1,46 @@
+.studies-section {
+height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+background: linear-gradient(135deg, #fde2e2, #fad2e1);
+position: relative;
+}
+
+.contact-info {
+margin-top: 40px;
+text-align: center;
+}
+
+.contact-info h3 {
+font-size: 1.5rem;
+margin-bottom: 10px;
+}
+
+/* Línea de tiempo horizontal */
+.timeline {
+display: flex;
+flex-direction: row;
+gap: 40px;
+animation: slideIn 1s forwards;
+}
+
+.timeline-item {
+background: white;
+padding: 15px 20px;
+border-radius: 8px;
+box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Animación de entrada lateral */
+@keyframes slideIn {
+from {
+transform: translateX(-100%);
+opacity: 0;
+}
+to {
+transform: translateX(0);
+opacity: 1;
+}
+}

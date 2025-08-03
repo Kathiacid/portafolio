@@ -1,0 +1,35 @@
+.navbar {
+position: fixed;
+right: 40px; /* Más alejado del borde derecho */
+top: 50%;
+transform: translateY(-50%);
+display: flex;
+flex-direction: column;
+gap: 32px; /* Separación aumentada (antes 24px) */
+z-index: 1000;
+}
+
+.dot {
+width: 18px; /* Tamaño intermedio */
+height: 18px;
+background: #f2b8b9;
+border-radius: 50%;
+transition: all 0.4s ease; /* Transición más suave */
+cursor: pointer;
+border: 3px solid transparent; /* Borde más grueso (antes 2px) */
+}
+
+.dot.active {
+transform: scale(1.4);
+background: #f2b8b9;
+border: 4px solid #efe1e1; /* Borde activo extra grueso */
+box-shadow: 
+0 0 10px rgba(239, 225, 225, 0.7), /* Sombra exterior */
+0 0 5px rgba(255, 255, 255, 0.5) inset; /* Sombra interior sutil */
+}
+
+/* Efecto hover refinado */
+.dot:hover:not(.active) {
+transform: scale(1.15);
+border: 3px solid rgba(239, 225, 225, 0.3); /* Borde semi-transparente */
+}

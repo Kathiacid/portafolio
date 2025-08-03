@@ -1,0 +1,8 @@
+.profile-photo img {
+border-radius: 50%;
+width: 150px;
+transition: transform 0.3s;
+}
+.profile-photo:hover img {
+transform: scale(1.1);
+}
