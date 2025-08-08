@@ -135,3 +135,20 @@
     margin: 0;
     color: #666;
 }
+.cv-button {
+    width: 230px;
+    margin-left: -20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+    margin-top: -15px;
+}
+
+.cv-button:hover {
+    transform: translateY(-2px); /* Efecto de levantar */
+}
+
+.profile-photo {
+    width: 200px;
+}

@@ -1,11 +1,11 @@
 .studies-section {
 height: 100vh;
+background-image: url('/assets/.studies-section');
+background-size: cover;
+background-position: center;
 display: flex;
-flex-direction: column;
 justify-content: center;
 align-items: center;
-background: linear-gradient(135deg, #fde2e2, #fad2e1);
-position: relative;
 }
 
 .contact-info {

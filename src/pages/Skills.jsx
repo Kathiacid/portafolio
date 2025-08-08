@@ -11,6 +11,7 @@ return (
     <div className="top-section">
     <div className="header-section">
         <h2>Hola</h2>
+        <img src="./src/assets/Profile-photo.png" className="profile-photo"></img>
         <p className="description">
         Soy una profesional con dos años de estudios en Análisis de Programación, 
         complementados con cursos especializados en UX/UI y desarrollo Front-End. 
