@@ -13,10 +13,7 @@ return (
         <h2>Hola</h2>
         <img src="./src/assets/Profile-photo.png" className="profile-photo"></img>
         <p className="description">
-        Soy una profesional con dos años de estudios en Análisis de Programación, 
-        complementados con cursos especializados en UX/UI y desarrollo Front-End. 
-        Me apasiona crear experiencias digitales funcionales y visualmente atractivas, 
-        tanto en aplicaciones como en sitios web.
+        Soy una profesional con dos años de estudios en Analista programador, complementados con cursos especializados en UX/UI y desarrollo Front-End. Me apasiona crear experiencias digitales funcionales y visualmente atractivas, tanto en aplicaciones como en sitios web.
         </p>
         <a href="/cv.pdf" download className="cv-link">
         <img src={CVButton} alt="Descargar CV" className="cv-button" />

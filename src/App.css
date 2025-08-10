@@ -54,3 +54,57 @@ background-repeat: no-repeat;
   height: 100vh;
   width: 100%;
 }
+
+/* Estilos para el botón del carrusel */
+.carousel-button {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 100;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-button.left {
+  left: 20px;
+}
+
+/* Animaciones para la transición de página */
+.studies-section {
+  position: relative;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Si necesitas una animación más avanzada, añade esto */
+.page-enter {
+  transform: translateX(100%);
+}
+
+.page-enter-active {
+  transform: translateX(0);
+  transition: transform 300ms ease-in;
+}
+
+.page-exit {
+  transform: translateX(0);
+}
+
+.page-exit-active {
+  transform: translateX(-100%);
+  transition: transform 300ms ease-in;
+}
