@@ -4,17 +4,43 @@ flex-direction: column;
 display: flex;
 align-items: center;
 }
+
 .content {
-    margin-top: 50px;
-    display: flex;
-    gap:100px;
+margin-top: 50px;
+display: flex;
+gap: 100px;
 }
-.imagen{
-    width: 250px;
+
+.imagen {
+width: 250px;
 }
+
+/* Estilos para el efecto de hover */
 .contact-info {
 margin-top: 40px;
 text-align: center;
+position: relative;
+display: flex;
+cursor: pointer;
+}
+
+.contact-info__image {
+display: block; 
+}
+
+.contact-info__arrows {
+position: absolute;
+top: 20%;
+left: 70%;
+transform: translate(-50%, -50%);
+opacity: 0;
+transition: all 0.4s ease;
+pointer-events: none;
+}
+
+.contact-info:hover .contact-info__arrows {
+opacity: 1;
+transform: translate(-50%, -50%) scale(1.2);
 }
 
 .contact-info h3 {
