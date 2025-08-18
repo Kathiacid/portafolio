@@ -1,6 +1,6 @@
 .navbar {
 position: fixed;
-right: 40px; /* Más alejado del borde derecho */
+right: 20px; /* Más alejado del borde derecho */
 top: 50%;
 transform: translateY(-50%);
 display: flex;
