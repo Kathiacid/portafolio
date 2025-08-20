@@ -22,7 +22,14 @@ return (
     <img src="./src/assets/contactametitulo.png" className="contact-info__image" alt="Contáctame"></img>
     <img src="./src/assets/flechas.png" className="contact-info__arrows" alt="Flechas"></img>
     </div>
-    <p>Email: tuemail@mail.com</p>
+    <section>
+        <div className="name"><img src="./src/assets/contact/person.png"></img><p>Kathia Cid Mellado</p></div>
+        <div className="ubi"><img src="./src/assets/contact/ubi.png"></img><p>Concepción,Chile</p></div>
+        <div className="git"><img src="./src/assets/contact/git.png"></img><p>Kathiacid</p></div>
+        <div className="gmail"><img src="./src/assets/contact/gmail.png"></img><p>Email: tuemail@mail.com</p></div> 
+        <div className="phone"><img src="./src/assets/contact/phone.png"></img><p>+56984038859</p></div>
+    </section>
+
 </section>
 );
 }

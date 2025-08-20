@@ -3,6 +3,12 @@ height: 100vh;
 flex-direction: column;
 display: flex;
 align-items: center;
+margin-right: 40px;
+margin-left: 40px;
+overflow: auto;
+}
+::-webkit-scrollbar {
+    display: none;
 }
 
 .content {
@@ -73,4 +79,9 @@ to {
 transform: translateX(0);
 opacity: 1;
 }
+}
+.name,.ubi,.git,.gmail,.phone{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
 }

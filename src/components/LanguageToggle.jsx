@@ -14,7 +14,7 @@ i18n.changeLanguage(isSpanish ? "en" : "es");
 return (
 <div className="lang-switch-wrapper">
     <img
-    src="../flags/es.png"
+    src="./flags/es.png"
     alt="Español"
     className="lang-flag left"
     />
@@ -23,7 +23,7 @@ return (
     <span className="lang-slider" />
     </label>
     <img
-    src="../flags/us.png"
+    src="./flags/us.png"
     alt="English"
     className="lang-flag right"
     />
