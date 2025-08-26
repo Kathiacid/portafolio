@@ -9,13 +9,27 @@ return (
     <Timeline />
     <section className="content">
     <div className="cursos">
-        <h2>Cursos</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, ducimus aut nemo nihil ab voluptatibus excepturi, illum perspiciatis eaque nulla temporibus tempore incidunt nisi harum odio quidem atque non animi.</p>
+        <h1>Cursos</h1>
+        <p> 
+            <ul>
+                <li>Curso Javascript UDEMY</li>
+                <li> Curso UX/UI UDEMY</li>
+            </ul>
+        </p>
     </div>
     <img src="./src/assets/imgstudies.png" className="imagen" alt="Estudios"></img>
     <div className="softskills">
-        <h2>Softskills</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos sint ex, libero quae quas esse odio ducimus deleniti eaque provident cupiditate dignissimos ab error porro magnam blanditiis maxime dolor ipsum?</p>
+        <h1>Softskills</h1>
+        <p> 
+            <ul>
+                <li>Bilingue
+        (Español e ingles)</li>
+                <li>  Detallista</li>
+                <li>Enfoque</li>
+                <li>Responsable</li>
+                <li>Disciplina</li>
+            </ul>
+        </p>
     </div>
     </section>
     <div className="contact-info">
@@ -26,7 +40,7 @@ return (
         <div className="name"><img src="./src/assets/contact/person.png"></img><p>Kathia Cid Mellado</p></div>
         <div className="ubi"><img src="./src/assets/contact/ubi.png"></img><p>Concepción,Chile</p></div>
         <div className="git"><img src="./src/assets/contact/git.png"></img><p>Kathiacid</p></div>
-        <div className="gmail"><img src="./src/assets/contact/gmail.png"></img><p>Email: tuemail@mail.com</p></div> 
+        <div className="gmail"><img src="./src/assets/contact/gmail.png"></img><p>kathiacid98@gmail.com</p></div> 
         <div className="phone"><img src="./src/assets/contact/phone.png"></img><p>+56984038859</p></div>
     </section>
 

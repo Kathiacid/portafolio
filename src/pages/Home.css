@@ -1,50 +1,70 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
 .home-section {
-height: 100vh;
-width: 100%;
-background: linear-gradient(135deg, #fde2e2, #fad2e1);
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
+/* Contenedor del logo en esquina superior izquierda */
+.logo-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+    
+}
+
+/* Estilos para el logo pequeño */
+.logo {
+            
+            animation: rotate 45s linear infinite;
+            filter: drop-shadow(0 3px 5px rgba(235, 4, 4, 0.5));
+            transition: transform 0.3s ease;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+
 .intro-text {
-text-align: center;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.4);
 }
 
 .intro-text h1 {
-font-size: 3rem;
-margin: 0;
+    font-size: 3rem;
+    margin: 0;
 }
 
 .intro-text p {
-font-size: 1.2rem;
-color: #333;
+    font-size: 1.2rem;
+    color: #333;
 }
 
 .placeholder-image {
-width: 90vw;
-height: 85vh;
-background: rgba(217, 217, 217, 0.24); /* solo para que lo veas */
-border: 2px solid #999;
-border-radius: 16px;
-position: relative;
+    width: 90vw;
+    height: 85vh;
+    background: rgba(217, 217, 217, 0.24);
+    border: 2px solid #999;
+    border-radius: 16px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-.home-section {
-height: 100vh;
-background-image: url('/assets/tu-fondo.png');
-background-size: cover;
-background-position: center;
-display: flex;
-justify-content: center;
-align-items: center;
-}
-

@@ -39,7 +39,7 @@ return (
         <p className="description">
         Soy una profesional con dos años de estudios en Analista programador, complementados con cursos especializados en UX/UI y desarrollo Front-End. Me apasiona crear experiencias digitales funcionales y visualmente atractivas, tanto en aplicaciones como en sitios web.
         </p>
-        <a href="/cv.pdf" download className="cv-link">
+        <a href="/portafolio/cv.pdf" download="CV.pdf" className="cv-link">
         <img src={CVButton} alt="Descargar CV" className="cv-button" />
         </a>
     </div>
@@ -47,9 +47,8 @@ return (
 
 
     <div className="content-section">
-    {/* Sección de habilidades */}
     <div className="skills-section">
-        <h3>Habilidades</h3>
+        <h1>Habilidades</h1>
         <div className="skills-columns">
         <div className="skills-column">
             <button className="skill-item">
@@ -108,7 +107,7 @@ return (
 
     {/* Sección de proyectos */}
     <div className="projects-section">
-        <h3>Algunos de mis proyectos</h3>
+        <h1>Algunos de mis proyectos</h1>
         <div className="projects-grid">
         <div className="project-card">
             <img src={MinkiShelterImage} alt="Minki's shelter" />
