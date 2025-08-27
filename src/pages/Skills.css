@@ -8,22 +8,20 @@
     margin-right: 5px;
 }
 .skills-page {
-    width: 100vw;
-    height: 100dvh;
+    width: 100%;
+    min-height: 100vh;
     margin: 0;
     padding: 40px;
     font-family: 'Arial', sans-serif;
     color: #333;
     display: flex;
+    flex-direction: column;
     box-sizing: border-box;
-    overflow: hidden;
-    justify-content: space-between;
 }
 
-/* Sección izquierda (20%) */
+/* Sección superior - Cambiada a diseño de columna en móviles */
 .top-section {
-    width: 25%;
-    height: 100%;
+    width: 100%;
     padding: 1.5rem;
     box-sizing: border-box;
     display: flex;
@@ -31,12 +29,17 @@
     background: white;
     border-radius: 15px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
 }
 
 .header-section {
     width: 100%;
     height: auto;
     margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .header-section h2 {
@@ -46,45 +49,27 @@
     position: relative;
 }
 
-/* Sección derecha (60%) con scroll oculto */
+/* Sección de contenido */
 .content-section {
-    width: 70%;
-    height: 100%;
-    padding: 5px;
+    width: 100%;
     box-sizing: border-box;
-    overflow-y: scroll; /* Scroll cuando sea necesario */
     padding-bottom: 2rem;
-    
-    /* Oculta la barra de scroll */
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE y Edge */
 }
 
-/* Oculta scrollbar en Chrome, Safari y Opera */
-.content-section::-webkit-scrollbar {
-    display: none;
-}
-
-/* Resto de estilos se mantienen igual */
-.skills-section h3, 
-.projects-section h3 {
-    font-size: 1.8rem;
-    margin-bottom: 50rem;
-    border-bottom: 2px solid #f2b8b9;
-    padding-bottom: 0.5rem;
-    display: inline-block;
-}
-
+/* Ajustes responsivos para las columnas de habilidades */
 .skills-columns {
     display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
     margin-bottom: 3rem;
     width: 100%;
     margin-top: 20px;
+    justify-content: space-between;
 }
 
 .skills-column {
     flex: 1;
+    min-width: 200px;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -99,6 +84,9 @@
     transition: all 0.3s;
     width: 100%;
     color: #f2b8b9;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .skill-item:hover {
@@ -152,12 +140,11 @@
 }
 .cv-button {
     width: 230px;
-    margin-left: -20px;
     cursor: pointer;
     transition: all 0.3s ease;
     text-align: center;
     text-decoration: none;
-    margin-top: -15px;
+    margin-top: 15px;
 }
 
 .cv-button:hover {
@@ -173,4 +160,86 @@
     margin-bottom: 20px;
     border: 5px solid #f2b8b9;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.description {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Media Queries para responsividad */
+@media (min-width: 768px) {
+    .skills-page {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .top-section {
+        width: 25%;
+        height: 100%;
+        margin-bottom: 0;
+        margin-right: 2rem;
+    }
+    
+    .content-section {
+        width: 70%;
+        height: 100vh;
+        overflow-y: scroll;
+        padding: 5px;
+        /* Oculta la barra de scroll */
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE y Edge */
+    }
+    
+    /* Oculta scrollbar en Chrome, Safari y Opera */
+    .content-section::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .header-section {
+        align-items: flex-start;
+        text-align: left;
+    }
+    
+    .cv-button {
+        margin-left: -20px;
+        margin-top: -15px;
+    }
+}
+
+@media (max-width: 767px) {
+    .skills-page {
+        padding: 20px;
+    }
+    
+    .skills-columns {
+        flex-direction: column;
+    }
+    
+    .skills-column {
+        min-width: 100%;
+    }
+    
+    .project-card {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-page {
+        padding: 15px;
+    }
+    
+    .profile-photo {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .cv-button {
+        width: 200px;
+    }
+    
+    .header-section h2 {
+        font-size: 2rem;
+    }
 }

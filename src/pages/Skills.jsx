@@ -45,7 +45,6 @@ return (
     </div>
     </div>
 
-
     <div className="content-section">
     <div className="skills-section">
         <h1>Habilidades</h1>
