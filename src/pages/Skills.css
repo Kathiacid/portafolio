@@ -93,6 +93,7 @@
     background-color: #f2b8b9;
     color: white;
     transform: translateY(-3px);
+    border: 1px solid #f5b5b6;
 }
 .skill-item:hover .skill-icon {
     filter: brightness(100) contrast(100) saturate(0);

@@ -1,12 +1,14 @@
 import React from "react";
 import "./Home.css";
 import LanguageToggle from "../components/LanguageToggle";
+import portada from "../assets/portada.png"
+import icon from "../assets/icon.png";
 
 export default function Home({ t }) {
 return (
 <section className="home-section">
     <div className="logo-container">
-    <img src="./src/assets/icon.png" alt="Logo" className="logo" />
+    <img src={icon} alt="Logo" className="logo" />
     </div>
     
     <div className="intro-text">
@@ -14,7 +16,7 @@ return (
     </div>
 
     <div className="placeholder-image">
-    {/* Imagen futura */}
+    {portada}
     <LanguageToggle />
     </div>
 </section>

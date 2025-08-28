@@ -1,15 +1,16 @@
 
 .studies-section {
-height: 100vh;
+min-height: 100vh; /* solo mínimo, no fijo */
 width: 100%;
 flex-direction: column;
 display: flex;
 align-items: center;
-overflow: auto;
+overflow: visible; /* importante */
 color: black;
 }
+
 ::-webkit-scrollbar {
-    display: none;
+display: none;
 }
 
 .content {
@@ -81,11 +82,13 @@ transform: translateX(0);
 opacity: 1;
 }
 }
-.name,.ubi,.git,.gmail,.phone{
-    display: flex;
-    gap: 20px;
-    margin-bottom: 15px;
+
+.name, .ubi, .git, .gmail, .phone {
+display: flex;
+gap: 20px;
+margin-bottom: 15px;
 }
-.cursos h1,.softskills h1{
-    margin-bottom: 20px;
+
+.cursos h1, .softskills h1 {
+margin-bottom: 20px;
 }
