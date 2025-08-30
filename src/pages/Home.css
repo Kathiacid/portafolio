@@ -14,14 +14,7 @@
     position: relative;
 }
 
-/* Contenedor del logo en esquina superior izquierda */
-.logo-container {
-    position: absolute;
-    top: 0px;
-    left: 20px;
-    z-index: 10;
-    
-}
+
 
 /* Estilos para el logo pequeño */
 .logo {

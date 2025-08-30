@@ -1,11 +1,12 @@
+// main.jsx o index.js
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App.jsx';
+import App from './App';
+import './i18n'; // Asegúrate de importar i18n
 import './index.css';
-import './i18n'; // importante si usas i18next
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>
+  </React.StrictMode>,
 );

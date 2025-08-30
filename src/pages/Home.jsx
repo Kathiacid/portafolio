@@ -8,7 +8,6 @@ export default function Home({ t }) {
 return (
 <section className="home-section">
     <div className="logo-container">
-    <img src={icon} alt="Logo" className="logo" />
     </div>
     
     <div className="intro-text">
@@ -17,7 +16,6 @@ return (
 
     <div className="placeholder-image">
     {portada}
-    <LanguageToggle />
     </div>
 </section>
 );
