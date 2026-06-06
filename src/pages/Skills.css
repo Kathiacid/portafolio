@@ -4,32 +4,58 @@
     box-sizing: border-box;
 }
 
+html, body {
+    scroll-behavior: smooth;
+}
+
 .skill-icon{
     margin-right: 5px;
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
 }
+
+@keyframes pageFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .skills-page {
     width: 100%;
     min-height: 100vh;
     margin: 0;
     padding: 40px;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Inter', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     color: #333;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
+    animation: pageFadeIn 1.5s ease-out forwards;
 }
 
-/* Sección superior - Cambiada a diseño de columna en móviles */
 .top-section {
     width: 100%;
-    padding: 1.5rem;
+    padding: 2rem;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(145deg, #ffffff, #fffdfd);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
+.top-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(242, 184, 185, 0.2);
 }
 
 .header-section {
@@ -49,14 +75,32 @@
     position: relative;
 }
 
-/* Sección de contenido */
 .content-section {
     width: 100%;
     box-sizing: border-box;
     padding-bottom: 2rem;
+    scroll-behavior: smooth;
 }
 
-/* Ajustes responsivos para las columnas de habilidades */
+.skills-section h1,
+.projects-section h1 {
+    font-size: 2.2rem;
+    color: #2a2a2a;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.skills-section h1::after,
+.projects-section h1::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #f2b8b9;
+    margin: 12px auto 0;
+    border-radius: 2px;
+}
+
 .skills-columns {
     display: flex;
     flex-wrap: wrap;
@@ -125,8 +169,84 @@
     object-fit: cover;
 }
 
+.project-card.flip-card {
+    background-color: transparent;
+    height: 320px;
+    perspective: 1000px;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: visible;
+    cursor: pointer;
+}
+
+.project-card.flip-card:hover {
+    transform: none;
+}
+
+.project-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.project-card.flip-card:hover .project-card-inner {
+    transform: rotateY(180deg);
+}
+
+.project-card-front, .project-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.project-card-front {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card-back {
+    background-color: #1a1a1a;
+    transform: rotateY(180deg);
+    position: relative;
+}
+
+.project-card-back img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+    transition: opacity 0.4s ease;
+}
+
+.project-card.flip-card:hover .project-card-back img {
+    opacity: 0.3;
+}
+
+.visit-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f2b8b9;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 0 4px 15px rgba(242, 184, 185, 0.4);
+    transition: transform 0.4s ease;
+}
+
 .project-info {
     padding: 1.5rem;
+    padding-bottom: 2rem;
     background: white;
 }
 
@@ -137,10 +257,47 @@
 
 .project-info p {
     margin: 0;
-    color: #666;
+    color: #555;
+    line-height: 1.6;
+    font-size: 0.95rem;
 }
+
+.tech-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tech-btn {
+    background-color: #f8f8f8;
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+    color: #f2b8b9;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.tech-btn:hover {
+    transform: translateY(-3px);
+    background-color: #f2b8b9;
+    color: white;
+}
+
+.project-card .tech-btn img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
 .cv-button {
-    width: 230px;
+    width: 400px;
     cursor: pointer;
     transition: all 0.3s ease;
     text-align: center;
@@ -149,26 +306,36 @@
 }
 
 .cv-button:hover {
-    transform: translateY(-2px); /* Efecto de levantar */
+    transform: translateY(-3px) scale(1.02);
 }
 
 .profile-photo {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     object-fit: cover;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border: 5px solid #f2b8b9;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 1.5rem 0;
+    border: 4px solid #f2b8b9;
+    box-shadow: 0 8px 20px rgba(242, 184, 185, 0.4);
+    transition: all 0.4s ease;
+}
+
+.profile-photo:hover {
+    transform: scale(1.05) rotate(3deg);
+    border-color: #ff9a9e;
+    box-shadow: 0 12px 25px rgba(255, 154, 158, 0.6);
 }
 
 .description {
-    margin-bottom: 20px;
-    line-height: 1.6;
+    margin-bottom: 25px;
+    line-height: 1.8;
+    color: #4a4a4a;
+    font-size: 1.1rem;
+    text-align: center;
+    max-width: 95%;
+    margin-inline: auto;
 }
 
-/* Media Queries para responsividad */
 @media (min-width: 768px) {
     .skills-page {
         flex-direction: row;
@@ -187,24 +354,22 @@
         height: 100vh;
         overflow-y: scroll;
         padding: 5px;
-        /* Oculta la barra de scroll */
-        scrollbar-width: none; /* Firefox */
-        -ms-overflow-style: none; /* IE y Edge */
+        scrollbar-width: none;
+        -ms-overflow-style: none;
     }
     
-    /* Oculta scrollbar en Chrome, Safari y Opera */
     .content-section::-webkit-scrollbar {
         display: none;
     }
     
     .header-section {
-        align-items: flex-start;
-        text-align: left;
+        align-items: center;
+        text-align: center;
     }
     
     .cv-button {
-        margin-left: -20px;
-        margin-top: -15px;
+        margin-left: 0;
+        margin-top: 0;
     }
 }
 
@@ -237,7 +402,7 @@
     }
     
     .cv-button {
-        width: 200px;
+        width: 230px;
     }
     
     .header-section h2 {

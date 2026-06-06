@@ -2,7 +2,7 @@ import React from "react";
 import Timeline from "../components/Timeline";
 import "./Studies.css";
 
-export default function Studies({ t }) {
+export default function Studies() {
 return (
 <section className="studies-section">
     <h1>Estudios</h1>
@@ -10,26 +10,21 @@ return (
     <section className="content">
     <div className="cursos">
         <h1>Cursos</h1>
-        <p> 
-            <ul>
-                <li>Curso Javascript UDEMY</li>
-                <li> Curso UX/UI UDEMY</li>
-            </ul>
-        </p>
+        <ul>
+            <li>Curso Javascript UDEMY</li>
+            <li> Curso UX/UI UDEMY</li>
+        </ul>
     </div>
     <img src="./src/assets/imgstudies.png" className="imagen" alt="Estudios"></img>
     <div className="softskills">
         <h1>Softskills</h1>
-        <p> 
-            <ul>
-                <li>Bilingue
-        (Español e ingles)</li>
-                <li>  Detallista</li>
-                <li>Enfoque</li>
-                <li>Responsable</li>
-                <li>Disciplina</li>
-            </ul>
-        </p>
+        <ul>
+            <li>Bilingue (Español e ingles)</li>
+            <li>  Detallista</li>
+            <li>Enfoque</li>
+            <li>Responsable</li>
+            <li>Disciplina</li>
+        </ul>
     </div>
     </section>
     <div className="contact-info">

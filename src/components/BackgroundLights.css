@@ -1,0 +1,33 @@
+.bg-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    z-index: -1;
+    opacity: 0.6;
+    transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+    will-change: transform;
+}
+
+.bg-glow.shape1 {
+    width: 40vw;
+    height: 40vw;
+    background: #ffb8bc;
+    top: -10%;
+    left: -10%;
+}
+
+.bg-glow.shape2 {
+    width: 45vw;
+    height: 45vw;
+    background: #fde0d7;
+    bottom: -15%;
+    right: -10%;
+}
+
+.bg-glow.shape3 {
+    width: 35vw;
+    height: 35vw;
+    background: #ffd8e1;
+    top: 25%;
+    left: 30%;
+}

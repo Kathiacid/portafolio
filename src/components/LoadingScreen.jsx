@@ -1,20 +1,18 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './LoadingScreen.css';
-import logo from '/icon.png';
+import logo from '../assets/icon.png';
 
 const LoadingScreen = ({ onLoadingComplete }) => {
 const [progress, setProgress] = useState(0);
 const [isComplete, setIsComplete] = useState(false);
 const [split, setSplit] = useState(false);
 
-// Duración total de la “carga” (ajústala a gusto)
 const DURATION_MS = 2500;
 
 const rafRef = useRef(null);
 const startRef = useRef(null);
 
 useEffect(() => {
-// Progreso basado en tiempo real → llega a 100 siempre
 const tick = (now) => {
     if (!startRef.current) startRef.current = now;
     const elapsed = now - startRef.current;
@@ -38,9 +36,7 @@ return () => {
 
 useEffect(() => {
 if (isComplete) {
-    // Arranca la animación de apertura
     const t1 = setTimeout(() => setSplit(true), 200);
-    // Avisar al padre cuando ya abrió
     const t2 = setTimeout(() => {
     if (onLoadingComplete) onLoadingComplete();
     }, 1400);
@@ -54,11 +50,9 @@ if (isComplete) {
 
 return (
 <div className={`loading-container ${split ? 'split' : ''}`}>
-    {/* Paneles que se abren */}
     <div className="loading-left" aria-hidden="true"></div>
     <div className="loading-right" aria-hidden="true"></div>
 
-    {/* Contenido central */}
     <div className="loading-content">
     <div className="spinning-logo">
         <div className="logo-circle">

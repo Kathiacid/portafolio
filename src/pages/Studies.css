@@ -1,12 +1,23 @@
+@keyframes pageFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 .studies-section {
-min-height: 100vh; /* solo mínimo, no fijo */
+min-height: 100vh;
 width: 100%;
 flex-direction: column;
 display: flex;
 align-items: center;
-overflow: visible; /* importante */
+overflow: visible;
 color: black;
+animation: pageFadeIn 1.5s ease-out forwards;
 }
 
 ::-webkit-scrollbar {
@@ -23,7 +34,6 @@ gap: 100px;
 width: 250px;
 }
 
-/* Estilos para el efecto de hover */
 .contact-info {
 margin-top: 40px;
 text-align: center;
@@ -56,7 +66,6 @@ font-size: 1.5rem;
 margin-bottom: 10px;
 }
 
-/* Línea de tiempo horizontal */
 .timeline {
 display: flex;
 flex-direction: row;
@@ -71,7 +80,6 @@ border-radius: 8px;
 box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-/* Animación de entrada lateral */
 @keyframes slideIn {
 from {
 transform: translateX(-100%);
