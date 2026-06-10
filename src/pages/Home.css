@@ -90,7 +90,7 @@
     background-color: transparent;
     color: var(--text-dark);
     font-family: 'Playfair Display', serif;
-    overflow-y: auto;
+    overflow: hidden;
     overflow-x: hidden;
     scrollbar-width: none; /* Oculta la barra de scroll en Firefox */
 }
@@ -103,23 +103,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 50px;
+    padding: 20px 50px;
     width: 100%;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 0.95rem;
 }
 
-.home-header a {
-    color: var(--text-dark);
+.home-header span {
     text-decoration: none;
-    transition: all 0.3s ease;
     font-weight: 600;
-}
-
-.home-header a:hover {
-    color: var(--primary-coral);
-    transform: translateY(-2px);
+    cursor: default; /* Indica que es solo texto y no interactivo al click */
+    color: #8c8c8c; /* Color diferente y unificado (gris claro) */
 }
 
 .home-main {
@@ -131,16 +126,18 @@
     position: relative;
     padding: 0 20px;
     z-index: 1;
+    min-height: 0;
 }
 
 .hero-text-container {
     text-align: center;
     z-index: 2;
-    margin-top: 30px;
+    margin-top: 15px;
+    flex-shrink: 0;
 }
 
 .hero-text-container h1 {
-    font-size: clamp(3rem, 8vw, 7rem);
+    font-size: clamp(2.5rem, 6vw, 5.5rem);
     color: var(--primary-coral);
     text-transform: uppercase;
     letter-spacing: 0.02em;
@@ -158,17 +155,20 @@
 
 .hero-image-wrapper {
     width: 100%;
+    height: 100%;
+    flex: 1;
+    min-height: 0;
     display: flex;
     justify-content: center;
-    margin-top: -8vh; /* Solapamiento orgánico negativo */
+    align-items: center;
+    margin-top: -4vh; /* Solapamiento orgánico negativo */
     z-index: 1;
 }
 
 .hero-image {
     max-width: 1100px;
     width: 100%;
-    height: auto;
-    max-height: 55vh; /* Altura aumentada para que destaque más */
+    max-height: 100%;
     object-fit: contain;
 }
 
@@ -176,7 +176,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
+    padding: 15px 50px;
     border-top: 1px solid rgba(0,0,0,0.1);
     width: 100%;
     font-size: 0.9rem;
@@ -194,6 +194,17 @@
     text-decoration: none;
     transition: all 0.3s ease;
     font-weight: 600;
+}
+
+/* Estilo especial para el enlace de LinkedIn */
+.social-links a.linkedin-link {
+    color: #0077b5; /* Azul característico de LinkedIn */
+    text-decoration: underline; /* Lo hace notar más como enlace */
+    text-underline-offset: 4px;
+}
+
+.social-links a.linkedin-link:hover {
+    color: #005582;
 }
 
 .social-links a:hover, .get-in-touch:hover, .contact-email a:hover {

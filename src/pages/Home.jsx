@@ -24,9 +24,9 @@ return (
     <div className="placeholder-box">
         <div className="home-container">
             <header className="home-header">
-            <a href="#illustrator">/ skills /</a>
-            <a href="#graphic-design">/ Graphic Design /</a>
-            <a href="#home">/ Kathia Cid /</a>
+            <span>/ Estructura /</span>
+            <span>/ Estética /</span>
+            <span>/ Interacción /</span>
             </header>
 
             <main className="home-main">
@@ -42,10 +42,10 @@ return (
 
             <footer className="home-footer">
             <div className="social-links">
-                <a href="#" aria-label="">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/kathiacid/" aria-label="">LinkedIn</a>
             </div>
             <div className="contact-email">
-                <a href="mailto:kathiacid98@gmail.com">kathiacid98@gmail.com</a>
+                <p>Kathia Cid </p>
             </div>
             
             </footer>

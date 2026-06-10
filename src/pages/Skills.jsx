@@ -16,13 +16,13 @@ import FigmaIcon from "../assets/icons/figma.png";
 import VisualIcon from "../assets/icons/visual.png";
 import MysqlIcon from "../assets/icons/mysql.png";
 import VueIcon from "../assets/icons/vue.png";
-import ProfilePhoto from "../assets/Profile-photo.png";
+import ProfilePhoto from "../assets/Profile-photo.jpeg";
 import EjemploImage from "../assets/ejemplo.jpg";
 
 
 export default function Skills() {
 return (
-<div className="skills-page">
+<div className="skills-page" style={{ overflow: "hidden" }}>
     <div className="top-section">
     <section className="title">
         <h2>
