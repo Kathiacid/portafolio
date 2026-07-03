@@ -4,8 +4,6 @@ import { useTranslation } from "react-i18next";
 import "./LanguageToggle.css";
 import esFlag from "/flags/es.png";
 import usFlag from "/flags/us.png";
-import esFlag from "../assets/flags/es.png";
-import usFlag from "../assets/flags/us.png";
 
 export default function LanguageToggle() {
 const { i18n } = useTranslation();

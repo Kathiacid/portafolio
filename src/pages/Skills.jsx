@@ -47,7 +47,7 @@ return (
         <p className="description">
         {t('skills_description')}
         </p>
-        <a href="/cv.pdf" download="CV-Kathia-Cid.pdf" className="cv-link">
+        <a href="/kathiacidcv2026.pdf" download="CV-Kathia-Cid.pdf" className="cv-link">
         <img src={CVButton} alt={t('downloadCV')} className="cv-button" />
         </a>
     </div>
