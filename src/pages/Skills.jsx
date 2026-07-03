@@ -11,7 +11,7 @@ import CssIcon from "../assets/icons/css.png";
 import JsIcon from "../assets/icons/js.png";
 import BootstrapIcon from "../assets/icons/bootstrap.png";
 import ReactIcon from "../assets/icons/react.png";
-import HtmlIcon from "../assets/icons/htnl.png";
+import HtmlIcon from "../assets/icons/html.png";
 import MongoIcon from "../assets/icons/mongo.png";
 import PsIcon from "../assets/icons/ps.png";
 import FigmaIcon from "../assets/icons/figma.png";
