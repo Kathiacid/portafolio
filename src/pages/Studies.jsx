@@ -1,29 +1,32 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import Timeline from "../components/Timeline";
 import "./Studies.css";
 
-export default function Studies() {
+export default function Studies({ t: propT }) {
+  const { t } = useTranslation();
+
 return (
 <section className="studies-section">
-    <h1>Estudios</h1>
+    <h1>{t('myStudies')}</h1>
     <Timeline />
     <section className="content">
     <div className="cursos">
-        <h1>Cursos</h1>
+        <h1>{t('courses_title')}</h1>
         <ul>
-            <li>Curso Javascript UDEMY</li>
-            <li> Curso UX/UI UDEMY</li>
+            <li>{t('course_js')}</li>
+            <li>{t('course_uxui')}</li>
         </ul>
     </div>
     <img src="./src/assets/imgstudies.png" className="imagen" alt="Estudios"></img>
     <div className="softskills">
-        <h1>Softskills</h1>
+        <h1>{t('softskills_title')}</h1>
         <ul>
-            <li>Bilingue (Español e ingles)</li>
-            <li>  Detallista</li>
-            <li>Enfoque</li>
-            <li>Responsable</li>
-            <li>Disciplina</li>
+            <li>{t('softskill_bilingual')}</li>
+            <li>{t('softskill_detail')}</li>
+            <li>{t('softskill_focus')}</li>
+            <li>{t('softskill_responsible')}</li>
+            <li>{t('softskill_discipline')}</li>
         </ul>
     </div>
     </section>

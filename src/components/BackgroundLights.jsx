@@ -6,11 +6,13 @@ export default function BackgroundLights() {
 
   useEffect(() => {
     const handleMouseMove = (e) => {
-      const x = (e.clientX - window.innerWidth / 2) / 10;
-      const y = (e.clientY - window.innerHeight / 2) / 10;
-      setMousePos({ x, y });
+      setMousePos({
+        x: e.clientX,
+        y: e.clientY,
+      });
     };
 
+    // Escuchamos el evento de movimiento del ratón en toda la ventana
     window.addEventListener("mousemove", handleMouseMove);
 
     return () => {
@@ -20,9 +22,10 @@ export default function BackgroundLights() {
 
   return (
     <>
-      <div className="bg-glow shape1" style={{ transform: `translate(${mousePos.x * 1.5}px, ${mousePos.y * 1.5}px)` }}></div>
-      <div className="bg-glow shape2" style={{ transform: `translate(${mousePos.x * -1.2}px, ${mousePos.y * -1.2}px)` }}></div>
-      <div className="bg-glow shape3" style={{ transform: `translate(${mousePos.x * 0.8}px, ${mousePos.y * 0.8}px)` }}></div>
+      {/* Multiplicamos por valores pequeños para hacer un efecto "parallax" suave */}
+      <div className="bg-glow shape1" style={{ transform: `translate(${mousePos.x * 0.03}px, ${mousePos.y * 0.03}px)` }}></div>
+      <div className="bg-glow shape2" style={{ transform: `translate(${mousePos.x * -0.03}px, ${mousePos.y * -0.03}px)` }}></div>
+      <div className="bg-glow shape3" style={{ transform: `translate(${mousePos.x * 0.015}px, ${mousePos.y * -0.015}px)` }}></div>
     </>
   );
 }

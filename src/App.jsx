@@ -4,9 +4,11 @@ import { useTranslation } from "react-i18next";
 import Home from "./pages/Home";
 import Skills from "./pages/Skills";
 import Studies from "./pages/Studies";
+import Recommendations from "./pages/Recommendations";
 import Navbar from "./components/Navbar";
 import LanguageToggle from "./components/LanguageToggle";
 import LoadingScreen from "./components/LoadingScreen";
+import BackgroundLights from "./components/BackgroundLights";
 import "./App.css";
 
 // Importar la configuración de i18n
@@ -20,7 +22,8 @@ export default function App() {
   const pages = [
     <Home t={t} key="home" />,
     <Skills t={t} key="skills" />,
-    <Studies t={t} key="studies" />
+    <Studies t={t} key="studies" />,
+    <Recommendations t={t} key="recommendations" />
   ];
 
   const handleLoadingComplete = () => {
@@ -42,6 +45,7 @@ export default function App() {
       
       {!isLoading && (
         <>
+          <BackgroundLights />
           <Navbar activePage={activePage} setActivePage={setActivePage} t={t} />
           <LanguageToggle />
           <div className="pages-wrapper">

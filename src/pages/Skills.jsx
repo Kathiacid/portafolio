@@ -1,8 +1,10 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import "./Skills.css";
 import CVButton from "../assets/cv-button.png";
 import LosBreinsImage from "../assets/icons/losbreins.png";
 import BreinsStoreImage from "../assets/icons/breinsstore.png";
+import AukaImage from "../assets/icons/auka.png";
 
 import PythonIcon from "../assets/icons/Group.png";
 import CssIcon from "../assets/icons/css.png";
@@ -16,11 +18,16 @@ import FigmaIcon from "../assets/icons/figma.png";
 import VisualIcon from "../assets/icons/visual.png";
 import MysqlIcon from "../assets/icons/mysql.png";
 import VueIcon from "../assets/icons/vue.png";
+import DjangoIcon from "../assets/icons/django.png";
 import ProfilePhoto from "../assets/Profile-photo.jpeg";
+import TypescriptIcon from "../assets/icons/typescript.png";
+import TailwindIcon from "../assets/icons/tailwind.png";
 import EjemploImage from "../assets/ejemplo.jpg";
 
 
-export default function Skills() {
+export default function Skills({ t: propT }) {
+  const { t } = useTranslation();
+
 return (
 <div className="skills-page" style={{ overflow: "hidden" }}>
     <div className="top-section">
@@ -29,7 +36,7 @@ return (
         <span style={{ color: 'black' }}>&lt;</span>
         <span style={{ color: '#F9C4C5' }}>h2</span>
         <span style={{ color: 'black' }}>&gt;</span>
-        <span style={{ color: 'black' }}> Hola </span>
+        <span style={{ color: 'black' }}> {t('skills_greeting')} </span>
         <span style={{ color: 'black' }}>&lt;/</span>
         <span style={{ color: '#F9C4C5' }}>h2</span>
         <span style={{ color: 'black' }}>&gt;</span>
@@ -38,17 +45,17 @@ return (
     <div className="header-section">
         <img src={ProfilePhoto} className="profile-photo" alt="Foto de perfil" />
         <p className="description">
-        Soy una profesional con dos años de estudios en Analista programador, complementados con cursos especializados en UX/UI y desarrollo Front-End. Me apasiona crear experiencias digitales funcionales y visualmente atractivas, tanto en aplicaciones como en sitios web.
+        {t('skills_description')}
         </p>
-        <a href="/portafolio/cv.pdf" download="CV.pdf" className="cv-link">
-        <img src={CVButton} alt="Descargar CV" className="cv-button" />
+        <a href="/cv.pdf" download="CV-Kathia-Cid.pdf" className="cv-link">
+        <img src={CVButton} alt={t('downloadCV')} className="cv-button" />
         </a>
     </div>
     </div>
 
     <div className="content-section">
     <div className="skills-section">
-        <h1>Habilidades</h1>
+        <h1>{t('mySkills')}</h1>
         <div className="skills-columns">
         <div className="skills-column">
             <button className="skill-item">
@@ -106,11 +113,21 @@ return (
             Vue
             </button>
         </div>
+        <div className="skills-column">
+            <button className="skill-item">
+            <img src={TypescriptIcon} alt="TypeScript" className="skill-icon" />
+            TypeScript
+            </button>
+            <button className="skill-item">
+            <img src={TailwindIcon} alt="Tailwind CSS" className="skill-icon" />
+            Tailwind CSS
+            </button>
+        </div>
         </div>
     </div>
 
     <div className="projects-section">
-        <h1>Algunos de mis proyectos</h1>
+        <h1>{t('skills_projects_title')}</h1>
         <div className="projects-grid">
         <div className="project-card flip-card" onClick={() => window.open('https://www.losbreins.com/', '_blank')}>
             <div className="project-card-inner">
@@ -129,7 +146,7 @@ return (
                 <div className="project-card-back">
                     <img src={EjemploImage} alt="Reverso Los Breins Roblox" />
                     <div className="visit-overlay">
-                        <span>Visitar Web 🚀</span>
+                        <span>{t('skills_visit_web')}</span>
                     </div>
                 </div>
             </div>
@@ -152,7 +169,31 @@ return (
                 <div className="project-card-back">
                     <img src={EjemploImage} alt="Reverso BREINSSTORE ©" />
                     <div className="visit-overlay">
-                        <span>Visitar Tienda 🛍️</span>
+                        <span>{t('skills_visit_store')}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div className="project-card flip-card" onClick={() => window.open('https://auka-terapias-main-dq9u.vercel.app//', '_blank')}>
+            <div className="project-card-inner">
+                <div className="project-card-front">
+                    <img src={AukaImage} alt="AUKA" />
+                    <div className="project-info">
+                    <h4>AUKA</h4>
+                    <div className="tech-icons">
+                        <div className="tech-btn"><img src={ReactIcon} alt="React" title="React" /></div>
+                        <div className="tech-btn"><img src={HtmlIcon} alt="HTML" title="HTML" /></div>
+                        <div className="tech-btn"><img src={CssIcon} alt="CSS" title="CSS" /></div>
+                        <div className="tech-btn"><img src={JsIcon} alt="JavaScript" title="JavaScript" /></div>
+                        <div className="tech-btn"><img src={DjangoIcon} alt="Django" title="Django" />
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div className="project-card-back">
+                    <img src={EjemploImage} alt="Reverso AUKA" />
+                    <div className="visit-overlay">
+                        <span>{t('skills_visit_store')}</span>
                     </div>
                 </div>
             </div>

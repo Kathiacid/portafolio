@@ -5,7 +5,7 @@ import "./Navbar.css";
 export default function Navbar({ activePage, setActivePage }) {
 return (
 <div className="navbar">
-    {[0, 1, 2].map((i) => (
+    {[0, 1, 2, 3].map((i) => (
     <div
         key={i}
         className={`dot ${activePage === i ? "active" : ""}`}

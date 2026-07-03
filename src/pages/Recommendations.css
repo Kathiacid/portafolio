@@ -1,0 +1,242 @@
+@keyframes pageFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.recommendations-page {
+    width: 100%;
+    min-height: 100vh;
+    padding: 60px 40px;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    animation: pageFadeIn 1.5s ease-out forwards;
+}
+
+.recommendations-container {
+    max-width: 1000px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: #2a2a2a;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #f2b8b9; /* Coral rosado de tu paleta */
+    margin: 12px auto 0;
+    border-radius: 2px;
+}
+
+/* Tarjetas de Recomendaciones */
+.recs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.rec-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(242, 184, 185, 0.2);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.rec-card:hover {
+    transform: translateY(-5px);
+}
+
+.quote-icon {
+    font-size: 3rem;
+    color: #f2b8b9;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    opacity: 0.5;
+    font-family: serif;
+}
+
+.rec-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.rec-author-profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.rec-author-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #f2b8b9;
+}
+
+.rec-author-info h4 {
+    margin: 0;
+    color: #2a2a2a;
+    font-size: 1.1rem;
+}
+
+.rec-author-info span {
+    font-size: 0.85rem;
+    color: #f2b8b9;
+    font-weight: 600;
+}
+
+/* Carrusel de Certificados */
+.carousel-wrapper {
+    width: 100%;
+    position: relative;
+    margin-top: 20px;
+}
+
+.carousel-track {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding-bottom: 20px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    scrollbar-color: #f2b8b9 #f8f8f8;
+}
+
+.carousel-track::-webkit-scrollbar {
+    height: 8px;
+}
+
+.carousel-track::-webkit-scrollbar-track {
+    background: #f8f8f8;
+    border-radius: 4px;
+}
+
+.carousel-track::-webkit-scrollbar-thumb {
+    background-color: #f2b8b9;
+    border-radius: 4px;
+}
+
+.cert-item {
+    flex: 0 0 300px;
+    height: 200px;
+    background-color: white;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+    overflow: hidden; /* Para asegurar que la imagen no se salga del borde redondeado */
+    cursor: pointer;
+}
+
+.cert-item:hover {
+    transform: scale(1.02);
+}
+
+.cert-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* o 'contain' si prefieres que se vea completo sin recortar */
+}
+
+@media (max-width: 768px) {
+    .recommendations-page {
+        padding: 40px 20px;
+    }
+    .recommendations-container {
+        padding: 20px;
+    }
+}
+
+/* Estilos para el Modal de Vista Previa */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.9); }
+    to { transform: scale(1); }
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(119, 75, 80, 0.7);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+    animation: zoomIn 0.3s ease;
+}
+
+.modal-image {
+    display: block;
+    max-width: 100%;
+    max-height: 90vh;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.modal-close {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+    font-weight: normal;
+    color: #f2b8b9;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+}
