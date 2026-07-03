@@ -2,6 +2,8 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import "./LanguageToggle.css";
+import esFlag from "/flags/es.png";
+import usFlag from "/flags/us.png";
 
 export default function LanguageToggle() {
 const { i18n } = useTranslation();
@@ -14,7 +16,7 @@ i18n.changeLanguage(isSpanish ? "en" : "es");
 return (
 <div className="lang-switch-wrapper">
     <img
-    src="./flags/es.png"
+    src={esFlag}
     alt="Español"
     className="lang-flag left"
     />
@@ -23,7 +25,7 @@ return (
     <span className="lang-slider" />
     </label>
     <img
-    src="./flags/us.png"
+    src={usFlag}
     alt="English"
     className="lang-flag right"
     />
