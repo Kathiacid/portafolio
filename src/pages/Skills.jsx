@@ -1,28 +1,28 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import "./Skills.css";
-import CVButton from "@/assets/cv-button.png";
-import LosBreinsImage from "@/assets/icons/losbreins.png";
-import BreinsStoreImage from "@/assets/icons/breinsstore.png";
-import AukaImage from "@/assets/icons/auka.png";
+import CVButton from "../assets/cv-button.png";
+import LosBreinsImage from "../assets/icons/losbreins.png";
+import BreinsStoreImage from "../assets/icons/breinsstore.png";
+import AukaImage from "../assets/icons/auka.png";
 
-import PythonIcon from "@/assets/icons/Group.png";
-import CssIcon from "@/assets/icons/css.png"; // Esta ruta ya era correcta, pero la revisé.
-import JsIcon from "@/assets/icons/js.png";
-import BootstrapIcon from "@/assets/icons/bootstrap.png";
-import ReactIcon from "@/assets/icons/react.png";
-import HtmlIcon from "@/assets/icons/htnl.png";
-import MongoIcon from "@/assets/icons/mongo.png";
-import PsIcon from "@/assets/icons/ps.png";
-import FigmaIcon from "@/assets/icons/figma.png";
-import VisualIcon from "@/assets/icons/visual.png"; // Esta ruta ya era correcta, pero la revisé.
-import MysqlIcon from "@/assets/icons/mysql.png";
-import VueIcon from "@/assets/icons/vue.png";
-import DjangoIcon from "@/assets/icons/django.png";
-import ProfilePhoto from "@/assets/Profile-photo.jpeg";
-import TypescriptIcon from "@/assets/icons/typescript.png";
-import TailwindIcon from "@/assets/icons/tailwind.png";
-import EjemploImage from "@/assets/ejemplo.jpg";
+import PythonIcon from "../assets/icons/Group.png";
+import CssIcon from "../assets/icons/css.png"; // Esta ruta ya era correcta, pero la revisé.
+import JsIcon from "../assets/icons/js.png";
+import BootstrapIcon from "../assets/icons/bootstrap.png";
+import ReactIcon from "../assets/icons/react.png";
+import HtmlIcon from "../assets/icons/htnl.png";
+import MongoIcon from "../assets/icons/mongo.png";
+import PsIcon from "../assets/icons/ps.png";
+import FigmaIcon from "../assets/icons/figma.png";
+import VisualIcon from "../assets/icons/visual.png"; // Esta ruta ya era correcta, pero la revisé.
+import MysqlIcon from "../assets/icons/mysql.png";
+import VueIcon from "../assets/icons/vue.png";
+import DjangoIcon from "../assets/icons/django.png";
+import ProfilePhoto from "../assets/profile-photo.jpeg";
+import TypescriptIcon from "../assets/icons/typescript.png";
+import TailwindIcon from "../assets/icons/tailwind.png";
+import EjemploImage from "../assets/ejemplo.jpg";
 
 
 export default function Skills({ t: propT }) {
