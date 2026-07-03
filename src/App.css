@@ -59,7 +59,7 @@ p{
 body, html {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background-image: url(../src/assets/Inicio.png);
+  background-image: url("./assets/Inicio.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -73,6 +73,3 @@ body, html {
 ::-webkit-scrollbar {
   display: none;
 }
-
-
-

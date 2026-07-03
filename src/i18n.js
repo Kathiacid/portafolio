@@ -61,7 +61,12 @@ softskill_bilingual: "Bilingüe (Español e inglés)",
 softskill_detail: "Detallista",
 softskill_focus: "Enfoque",
 softskill_responsible: "Responsable",
-softskill_discipline: "Disciplina"
+softskill_discipline: "Disciplina",
+contact_title: "Contáctame",
+contact_name: "Kathia Cid Mellado",
+contact_location: "Concepción, Chile",
+contact_github: "Kathiacid",
+contact_email: "kathiacid98@gmail.com"
 };
 
 // Traducciones en inglés
@@ -123,7 +128,12 @@ softskill_bilingual: "Bilingual (Spanish and English)",
 softskill_detail: "Detail-oriented",
 softskill_focus: "Focused",
 softskill_responsible: "Responsible",
-softskill_discipline: "Disciplined"
+softskill_discipline: "Disciplined",
+contact_title: "Contact Me",
+contact_name: "Kathia Cid Mellado",
+contact_location: "Concepción, Chile",
+contact_github: "Kathiacid",
+contact_email: "kathiacid98@gmail.com"
 };
 
 // Configuración de i18next

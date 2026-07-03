@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import "./Recommendations.css"; // Asegúrate de que este archivo exista y esté bien enlazado
 import FranciscoPhoto from "../assets/icons/francisco.png"; // Cambia a .jpg si es necesario
 import CarlosPhoto from "../assets/icons/carlos.jpeg"; // Cambia a .jpg si es necesario
@@ -22,6 +23,7 @@ const certificates = [
 
 export default function Recommendations({ t }) {
   const [selectedImage, setSelectedImage] = useState(null);
+  const { t: translate } = useTranslation(); // Usamos 'translate' para evitar conflicto con la prop 't'
   const closeModal = () => setSelectedImage(null);
 
   return (
@@ -29,35 +31,35 @@ export default function Recommendations({ t }) {
       <div className="recommendations-container">
         
         {/* SECCIÓN RECOMENDACIONES */}
-        <h1 className="section-title">{t("recommendations")}</h1>
+        <h1 className="section-title">{translate("recommendations")}</h1>
         <div className="recs-grid">
           <div className="rec-card">
             <div className="quote-icon">❝</div>
-            <p className="rec-text">{t("rec1_text")}</p>
+            <p className="rec-text">{translate("rec1_text")}</p>
             <div className="rec-author-profile">
               <img src={FranciscoPhoto} alt="Francisco" className="rec-author-img" />
               <div className="rec-author-info">
-                <h4>{t("rec1_author")}</h4>
-                <span>{t("rec1_role")}</span>
+                <h4>{translate("rec1_author")}</h4>
+                <span>{translate("rec1_role")}</span>
               </div>
             </div>
           </div>
           
           <div className="rec-card">
             <div className="quote-icon">❝</div>
-            <p className="rec-text">{t("rec2_text")}</p>
+            <p className="rec-text">{translate("rec2_text")}</p>
             <div className="rec-author-profile">
               <img src={CarlosPhoto} alt="Carlos" className="rec-author-img" />
               <div className="rec-author-info">
-                <h4>{t("rec2_author")}</h4>
-                <span>{t("rec2_role")}</span>
+                <h4>{translate("rec2_author")}</h4>
+                <span>{translate("rec2_role")}</span>
               </div>
             </div>
           </div>
         </div>
 
         {/* SECCIÓN CERTIFICADOS (CARRUSEL) */}
-        <h1 className="section-title" style={{ marginTop: '50px' }}>{t("certificates")}</h1>
+        <h1 className="section-title" style={{ marginTop: '50px' }}>{translate("certificates")}</h1>
         <div className="carousel-wrapper">
         <div className="carousel-track">
           {certificates.map((cert, index) => (
