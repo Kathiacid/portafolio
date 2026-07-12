@@ -4,6 +4,7 @@ import "./Skills.css";
 import CVButton from "../assets/cv-button.png";
 import LosBreinsImage from "../assets/icons/losbreins.png";
 import BreinsStoreImage from "../assets/icons/breinsstore.png";
+import ApiCheckImage from "../assets/icons/apicheck.png";
 import AukaImage from "../assets/icons/auka.png";
 
 import PythonIcon from "../assets/icons/Group.png";
@@ -23,6 +24,8 @@ import ProfilePhoto from "../assets/profile-photo.jpeg";
 import TypescriptIcon from "../assets/icons/typescript.png";
 import TailwindIcon from "../assets/icons/tailwind.png";
 import EjemploImage from "../assets/ejemplo.jpg";
+import PhpIcon from "../assets/icons/php.png";
+import LaravelIcon from "../assets/icons/laravel.png";
 
 
 export default function Skills({ t: propT }) {
@@ -58,70 +61,70 @@ return (
         <h1>{t('mySkills')}</h1>
         <div className="skills-columns">
         <div className="skills-column">
-            <button className="skill-item">
+            <div className="skill-item">
             <img src={PythonIcon} alt="Python" className="skill-icon" />
             Python
-            </button>
-            <button className="skill-item">
+            </div>
+            <div className="skill-item">
             <img src={CssIcon} alt="CSS" className="skill-icon" />
             CSS
-            </button>
-            <button className="skill-item">
+            </div>
+            <div className="skill-item">
             <img src={JsIcon} alt="JavaScript" className="skill-icon" />
             JavaScript
-            </button>
-            <button className="skill-item">
+            </div>
+            <div className="skill-item">
             <img src={BootstrapIcon} alt="Bootstrap" className="skill-icon" />
             Bootstrap
-            </button>
+            </div>
         </div>
 
         <div className="skills-column">
-            <button className="skill-item">
+            <div className="skill-item">
             <img src={ReactIcon} alt="React" className="skill-icon" />
             React
-            </button>
-            <button className="skill-item">
+            </div>
+            <div className="skill-item">
             <img src={HtmlIcon} alt="HTML" className="skill-icon" />
             HTML
-            </button>
-            <button className="skill-item">
+            </div>
+            <div className="skill-item">
             <img src={MongoIcon} alt="MongoDB" className="skill-icon" />
             MongoDB
-            </button>
-            <button className="skill-item">
+            </div>
+            <div className="skill-item">
             <img src={PsIcon} alt="Photoshop" className="skill-icon" />
             Photoshop
-            </button>
+            </div>
         </div>
 
         <div className="skills-column">
-            <button className="skill-item">
+            <div className="skill-item">
             <img src={FigmaIcon} alt="Figma" className="skill-icon" />
             Figma
-            </button>
-            <button className="skill-item">
+            </div>
+            <div className="skill-item">
             <img src={VisualIcon} alt="Visual Studio Code" className="skill-icon" />
             Visual Studio Code
-            </button>
-            <button className="skill-item">
+            </div>
+            <div className="skill-item">
             <img src={MysqlIcon} alt="MySQL" className="skill-icon" />
             MySQL
-            </button>
-            <button className="skill-item">
+            </div>
+            <div className="skill-item">
             <img src={VueIcon} alt="Vue" className="skill-icon" />
             Vue
-            </button>
+            </div>
         </div>
         <div className="skills-column">
-            <button className="skill-item">
+            <div className="skill-item">
             <img src={TypescriptIcon} alt="TypeScript" className="skill-icon" />
             TypeScript
-            </button>
-            <button className="skill-item">
+            </div>
+            <div className="skill-item">
             <img src={TailwindIcon} alt="Tailwind CSS" className="skill-icon" />
             Tailwind CSS
-            </button>
+            </div>
         </div>
         </div>
     </div>
@@ -162,7 +165,7 @@ return (
                         <div className="tech-btn"><img src={HtmlIcon} alt="HTML" title="HTML" /></div>
                         <div className="tech-btn"><img src={CssIcon} alt="CSS" title="CSS" /></div>
                         <div className="tech-btn"><img src={JsIcon} alt="JavaScript" title="JavaScript" /></div>
-                        <div className="tech-btn">Shopify</div>
+                        <button className="tech-btn">Shopify</button>
                     </div>
                     </div>
                 </div>
@@ -185,8 +188,7 @@ return (
                         <div className="tech-btn"><img src={HtmlIcon} alt="HTML" title="HTML" /></div>
                         <div className="tech-btn"><img src={CssIcon} alt="CSS" title="CSS" /></div>
                         <div className="tech-btn"><img src={JsIcon} alt="JavaScript" title="JavaScript" /></div>
-                        <div className="tech-btn"><img src={DjangoIcon} alt="Django" title="Django" />
-                        </div>
+                        <div className="tech-btn"><img src={DjangoIcon} alt="Django" title="Django" /></div>
                     </div>
                     </div>
                 </div>
@@ -194,6 +196,30 @@ return (
                     <img src={EjemploImage} alt="Reverso AUKA" />
                     <div className="visit-overlay">
                         <span>{t('skills_visit_store')}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div className="project-card flip-card" onClick={() => window.open('https://www.apicheck.cl/', '_blank')}>
+            <div className="project-card-inner">
+                <div className="project-card-front">
+                    <img src={ApiCheckImage} alt="ApiCheck" className="project-logo" />
+                    <div className="project-info">
+                    <h4>B-MaIA</h4>
+                    <div className="tech-icons">
+                        <div className="tech-btn"><img src={HtmlIcon} alt="HTML" title="HTML" /></div>
+                        <div className="tech-btn"><img src={CssIcon} alt="CSS" title="CSS" /></div>
+                        <div className="tech-btn"><img src={BootstrapIcon} alt="Bootstrap" title="Bootstrap" /></div>
+                        <div className="tech-btn"><img src={JsIcon} alt="JavaScript" title="JavaScript" /></div>
+                        <div className="tech-btn"><img src={PhpIcon} alt="PHP" title="PHP" /></div>
+                        <div className="tech-btn"><img src={LaravelIcon} alt="Laravel" title="Laravel" /></div>
+                    </div>
+                    </div>
+                </div>
+                <div className="project-card-back">
+                    <img src={EjemploImage} alt="Reverso ApiCheck" />
+                    <div className="visit-overlay">
+                        <span>{t('skills_visit_web')}</span>
                     </div>
                 </div>
             </div>
